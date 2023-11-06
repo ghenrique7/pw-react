@@ -6,11 +6,11 @@ import "./styles.css";
 function App() {
 	const [repositories, setRepositories] = useState([]);
 
-	// useEffect(() => {
-	// 	api.get("/repositories").then((response) =>
-	// 		setRepositories(response.data)
-	// 	);
-	// }, []);
+	useEffect(() => {
+		api.get("/repositories").then((response) =>
+			setRepositories(response.data)
+		);
+	}, []);
 
 	async function handleAddRepository() {
 		// TODO
@@ -27,11 +27,9 @@ function App() {
 		// TODO
 		await api.delete(`repositories/${id}`);
 
-		const updatedRepository = repositories.filter(
-			(repository) => repository.id !== id
+		setRepositories(
+			repositories.filter((repository) => repository.id !== id)
 		);
-
-		setRepositories(updatedRepository);
 	}
 
 	return (
