@@ -22,7 +22,31 @@ div li + li {
   margin-top: 15px;
 }
 
-button {
+.btn-remove {
+  color: #fff;
+  border: 0;
+  padding: 5px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin: 15px;
+  font-weight: bold;
+  font-size: 14px;
+  background: #ca4949;
+}
+
+.btn-like  {
+  background: #4bb591;
+  color: #fff;
+  border: 0;
+  padding: 5px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin: 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.btn-add {
   background: #7159c1;
   color: #fff;
   border: 0;
@@ -33,7 +57,16 @@ button {
   font-size: 14px;
 }
 
-div li button {
-  margin: 0 15px;
-  background: #ca4949;
+.add-repository-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin: 0;
+}
+
+.add-items {
+  width: 70%;
+  margin: 0;
+  margin-top: 5px;
 }
